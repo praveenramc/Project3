@@ -1,0 +1,40 @@
+Insert 22 475 238 97 42 0
+# New customer with id=22, categories="475 238 97 42"
+# Return: 1
+#
+Insert 12 44 109 0
+# Second customer with id=12, categories="44 109"
+# Return: 1
+#
+Insert 37 109 475 694 88 0
+# Another customer with id=37, categories="109 475 694 88"
+# Return: 1
+#
+AddRevenue 22 9.99
+# Customer with id=22 now has amount=9.99, truncated to 9
+# Return: 9
+#
+AddRevenue 37 2
+# Customer with id=37 now has amount=2.00
+# Return: 2
+#
+AddRevenue 22 1
+# Customer with id=22 now has amount=10.99
+# Return: 10
+#
+TopThree 475
+# Top 3 customers who are interested in category 475 based on the
+# amounts they have spent are 22(10.99) and 37(2.00)
+# Return: 12
+#
+Delete 37
+# Return: 2
+#
+#
+End
+# Lines after End are not processed
+
+
+Output:
+38
+
